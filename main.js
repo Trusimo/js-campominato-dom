@@ -33,7 +33,13 @@ function createGrid(CelleX, CelleY) {
 } console.log(bombe);
 
     // conto i click che mi serviranno per il punteggio
+    let griglia = document.querySelector(".grid-container");
     let numeroclick = 0;
+
+    griglia.addEventListener("click", function() {
+    numeroclick += 1;
+    console.log(numeroclick);
+    });
 
     // aggiungo l'evento al click: se bomba, rosso, altrimenti azzurro
     celle.addEventListener("click", function(){ 
@@ -43,7 +49,7 @@ function createGrid(CelleX, CelleY) {
             celle.style.backgroundColor = 'red';
             document.getElementById("youlost").style.display = 'block';
             document.getElementById("tryagain").style.display = 'block';
-            document.getElementById("clicknumber") === numeroclick;
+            document.getElementById("clicknumber").innerText = numeroclick - 1;
         } else {
         celle.style.backgroundColor = "lightblue";
     }
