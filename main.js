@@ -23,6 +23,7 @@ function createGrid(CelleX, CelleY) {
     celle.classList.add("celle");
     celle.textContent = i;
 
+    // creo l'array con le bombe
     var bombe = [];
     for (let n=1, j=16; n<=j; n++) {
     let numerobomba = Math.round(Math.random() * 100);
@@ -31,9 +32,11 @@ function createGrid(CelleX, CelleY) {
     }
 } console.log(bombe);
 
+    // aggiungo l'evento al click: se bomba, rosso, altrimenti azzurro
     celle.addEventListener("click", function(){ 
         if (bombe.includes(i)) {
             celle.style.backgroundColor = 'red';
+            document.getElementsByClassName("youlost").style.display = 'block';
         } else {
         celle.style.backgroundColor = "lightblue";
     }
