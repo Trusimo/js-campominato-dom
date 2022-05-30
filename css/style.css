@@ -23,5 +23,11 @@ main {
 }
 
 #youlost {
+    text-align: center;
+    display: none;
+}
+
+#tryagain {
+    text-align: center;
     display: none;
 }

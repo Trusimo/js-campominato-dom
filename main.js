@@ -32,11 +32,18 @@ function createGrid(CelleX, CelleY) {
     }
 } console.log(bombe);
 
+    // conto i click che mi serviranno per il punteggio
+    let numeroclick = 0;
+
     // aggiungo l'evento al click: se bomba, rosso, altrimenti azzurro
     celle.addEventListener("click", function(){ 
+        numeroclick += 1;
+        console.log(numeroclick);
         if (bombe.includes(i)) {
             celle.style.backgroundColor = 'red';
-            document.getElementsById("youlost").style.display = 'block';
+            document.getElementById("youlost").style.display = 'block';
+            document.getElementById("tryagain").style.display = 'block';
+            document.getElementById("clicknumber") === numeroclick;
         } else {
         celle.style.backgroundColor = "lightblue";
     }
