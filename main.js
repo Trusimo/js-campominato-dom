@@ -36,7 +36,7 @@ function createGrid(CelleX, CelleY) {
     celle.addEventListener("click", function(){ 
         if (bombe.includes(i)) {
             celle.style.backgroundColor = 'red';
-            document.getElementsByClassName("youlost").style.display = 'block';
+            document.getElementsById("youlost").style.display = 'block';
         } else {
         celle.style.backgroundColor = "lightblue";
     }
