@@ -21,7 +21,7 @@ function createGrid(CelleX, CelleY) {
     for (let i = 1; i <= celletotali; i++) {
     const celle = document.createElement("div");
     celle.classList.add("celle");
-    celle.textContent = i;
+    // celle.textContent = i;
 
     // creo l'array con le bombe
     var bombe = [];
